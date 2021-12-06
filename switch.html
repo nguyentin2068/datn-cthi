@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .clearfix{
+            clear: both;
+        }
+        ul li{
+            list-style: none;
+        }
+        #wrapper{
+            width: 960px;
+            margin: 0px auto;
+        }
+        #logo{
+            float: left;
+            height: 60px;
+        }
+        #logo img{
+            height: 100%;
+            width: auto;
+        }
+        #tabs{
+            padding: 20px 0px;
+        }
+        /* style nav-tabs */
+        .nav-tabs{
+            display: flex;
+            list-style: none;
+            margin: 0px;
+            padding: 0;
+            border-bottom: 3px solid #ddd;
+        }
+        .nav-tabs li{
+            margin-right: 10px;
+        }
+        .nav-tabs li a{
+            display: block;
+            padding: 6px 10px;
+            text-decoration: none;
+            position: relative;
+        }
+        .nav-tabs li a::after{
+            content: "";
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: -3px;
+            background: transparent;
+        }
+        .nav-tabs li.active a::after, .nav-tabs li:hover a::after{
+            background: #e74c3c;
+        }
+        /* stlye content */
+        .tab-content{
+            padding: 20px 0px;
+        }
+    </style>
+
+    <div id="wrapper">
+        <div id="header">
+            <tr>
+                <td>
+                    <img src="SPKT.jpg" height="200" width="auto">
+                </td>
+            </tr>           
+            <div class="clearfix"></div>             
+        </div>
+    </div>
+
+    <table id="main" border="1" width="100%" height="250">
+        <thead>
+            <tr>
+            <td colspan="4">bang trang thai ket noi</td>
+            </tr>
+        </thead>
+        <tr>
+            <td>ket noi server</td><td>row 1, columnn 2</td>
+        </tr>
+        <tr>
+            <td>du kieu trung tam</td><td>row 2, columnn 2</td>
+        </tr>
+        <tr>
+            <td>che do dieu khien</td><td>row 1, columnn 2</td>
+        </tr>
+        <tr>
+            <td>chuyen che do</td><td><div id="wrapper">
+                <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+            </div></td>
+        </tr>
+    </table>
+
+    <div id="tabs">
+        <div class="tabs">
+            <ul class="nav-tabs">
+                <li class="active"><a href="#auto">Auto</a></li>
+                <li><a href="#manual">Manual</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="auto" class="tab-content-item">
+                    <h2>Auto</h2>
+                    <table id="auto" border="1" width="100%" height="250">
+                        <thead>
+                            <tr>
+                            <td colspan="4">bang trang thai che do auto</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>nhiet do</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>do am</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>khi gas</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>canh bao trom</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>trang thai canh bao</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>trang thai quat</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>trang thai may bom</td><td>row 1, columnn 2</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="manual" class="tab-content-item">
+                    <h2>Manual</h2>
+                    <table id="manual" border="1" width="100%" height="250">
+                        <thead>
+                            <tr>
+                            <td colspan="4">bang trang thai che do manual</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>dieu khien canh bao</td><td><div id="wrapper">
+                                <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>dieu khien quat</td><td><div id="wrapper">
+                                <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>dieu khien may bom</td><td><div id="wrapper">
+                                <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td>trang thai canh bao</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>trang thai quat</td><td>row 1, columnn 2</td>
+                        </tr>
+                        <tr>
+                            <td>trang thai may bom</td><td>row 1, columnn 2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>   
+
+    <style>
+        :root{
+            --transition-effect: 0.25s cubic-bezier(.25,-0.59,.82,1.66);
+        }
+        #wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            min-height: 5vh;
+        }
+        .switch-toggle{
+            width: 90px;
+            height: 50px;
+            appearance: none;
+            background: #83d8ff;
+            border-radius: 26px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: inset 0px 0px 16px rgba(0, 0, 0, .3);
+            transition: var(--transition-effect);
+        }
+        .switch-toggle::before{
+            content: "";
+            width: 44px;
+            height: 44px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            background: #efe2bf;
+            border-radius: 50%;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+            transition: var(--transition-effect);
+        }
+        .switch-toggle:checked{
+            background: #749dd6;
+        }
+        .switch-toggle:checked::before{
+            left: 40px;
+        }
+    </style>
+    
+    <div>
+        nhiet do: <span id="nhietdos">0</span>do C<br>       
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.tab-content-item').hide();
+        $('.tab-content-item:first-child').fadeIn();
+        $('.nav-tabs li').click(function(){
+            //active nav tabs
+            $('.nav-tabs li').removeClass('active');
+            $(this).addClass('active');
+
+            //show tab-content item
+            let id_tab_content = $(this).children('a').attr('href');
+            //alert(id_tab_content);
+            $('.tab-content-item').hide();
+            $(id_tab_content).fadeIn();
+            return false;
+        });
+    });
+</script>
+
+</html>
